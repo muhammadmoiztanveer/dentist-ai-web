@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/layout";
-// import LogInPage from "./pages/login/login";
-// import SignUpPage from "./pages/signup/signup";
-// import ForgotPasswordPage from "./pages/forgotPassword/forgotPassword";
+import LogIn from "./pages/login/login";
+import SignUp from "./pages/signup/signup";
+import OtpVerification from "./pages/otpVerification/otpVerification";
+import ResetPassword from "./pages/resetPassword/resetPassword";
+import EmailVerfication from "./pages/emailVerification/emailVerification";
 // import StoreManagmentPage from "./pages/storeManagment/storeManagment";
 // import UserManagmentPage from "./pages/userManagment/userManagment";
 // import PaymentManagmentPage from "./pages/paymentManagment/paymentManagment";
@@ -14,10 +16,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/login" element={<LogInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="/verification-otp" element={<RegistrationOTPPage />} /> */}
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/verify-email" element={<EmailVerfication />} />
+        <Route path="/verify-otp" element={<OtpVerification />} />
 
         <Route path="/" element={<Layout />}>
           {/* <Route path="/store" element={<StoreManagmentPage />} />
