@@ -16,7 +16,7 @@ const CustomInput = ({
       <input
         id="custom-input"
         type={type}
-        className={`w-full border-2 border-primary px-4 py-3 rounded-full text-sm placeholder:text-primary placeholder:font-medium text-primary font-medium focus:outline-none`}
+        className={`w-full bg-white border-2 border-primary px-4 py-3 rounded-full text-sm placeholder:text-primary placeholder:font-medium text-primary font-medium focus:outline-none`}
         placeholder={placeholder}
         style={{ width: width }}
       />

@@ -1,14 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import BackgroundImage1 from "@/assets/svgs/md-reset-password-screens-background.svg";
 import BackgroundImage2 from "@/assets/svgs/lg-reset-password-screens-background.svg";
 import BackgroundImage3 from "@/assets/svgs/xl-reset-password-screens-background.svg";
 import BackgroundCurve from "@/assets/svgs/auth-screens-background-curve.svg";
 import Logo from "@/assets/svgs/logo.svg";
-import CustomInput from "@/components/ui/customInput/customInput";
 import CustomButton from "@/components/ui/customButton/customButton";
 
-const EmailVerfication = () => {
+const SuccessResponse = () => {
   return (
     <div className="relative flex flex-col justify-center items-center w-screen h-screen md:h-fit bg-white">
       <picture>
@@ -40,51 +38,28 @@ const EmailVerfication = () => {
       <div className="absolute top-0 w-full h-screen flex flex-col gap-10 justify-center items-center px-6 sm:px-0 md:hidden">
         <img src={Logo} alt="Logo" className="" />
 
-        <div className="flex flex-col gap-8 shadow-lg bg-white w-full sm:w-3/6 h-fit rounded-2xl p-5">
-          <div className="text-2xl text-center font-medium">パスワード忘れ</div>
+        <div className="flex flex-col gap-8 shadow-lg bg-white w-full sm:w-3/6 h-fit rounded-2xl p-6">
+          <div className="text-4xl text-center font-medium">再設定完了</div>
 
-          <div className="flex flex-col gap-3">
-            <CustomInput
-              label="メールアドレス"
-              placeholder="example@example.com"
-              type="email"
-            />
+          <div className="flex flex-col gap-3 text-center">
+            パスワードの再設定が完了しました。下記からログインして頂けます。
           </div>
 
-          <CustomButton text="送信" />
-
-          <Link
-            to="/verify-email"
-            className="text-base text-primary underline underline-offset-3 flex self-center cursor-pointer"
-          >
-            ログインページに戻る
-          </Link>
+          <CustomButton text="ログインページへ戻る" width="220px" />
         </div>
       </div>
 
-      <div className="hidden md:flex flex-col gap-8 shadow-lg bg-white w-fit h-fit md:px-14 lg:px-20 xl:px-24 2xl:px-30 py-5 rounded-xl lg:rounded-2xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-18 lg:mt-18 xl:mt-38 2xl:mt-42">
-        <div className="text-2xl text-center font-medium">パスワード忘れ</div>
+      <div className="hidden md:flex flex-col gap-8 shadow-lg bg-white w-fit h-fit md:px-14 lg:px-20 xl:px-24 2xl:px-30 py-6 rounded-xl lg:rounded-2xl absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-18 lg:mt-18 xl:mt-38 2xl:mt-42">
+        <div className="text-4xl text-center font-medium">再設定完了</div>
 
-        <div className="flex flex-col gap-3">
-          <CustomInput
-            label="メールアドレス"
-            placeholder="example@example.com"
-            type="email"
-            width="280px"
-          />
+        <div className="flex flex-col gap-3  text-center">
+          パスワードの再設定が完了しました。下記からログインして頂けます。
         </div>
 
-        <CustomButton text="送信" />
-
-        <Link
-          to="/verify-email"
-          className="text-base text-primary underline underline-offset-3 flex self-center cursor-pointer"
-        >
-          ログインページに戻る
-        </Link>
+        <CustomButton text="ログインページへ戻る" width="220px" />
       </div>
     </div>
   );
 };
 
-export default EmailVerfication;
+export default SuccessResponse;
